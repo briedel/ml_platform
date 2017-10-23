@@ -38,6 +38,9 @@ RUN pip3 --no-cache-dir install \
         metakernel \
         jupyter \
         jupyterlab \
+        jupyterhub \
+        globus_sdk \
+        globus_sdk[jwt] \
         matplotlib \
         numpy \
         pandas \
