@@ -110,5 +110,5 @@ RUN wget https://raw.githubusercontent.com/briedel/ML_platform_tests/master/jupy
 
 #execute service
 # CMD ["/.run"]
-
+ENV PATH /usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 CMD ["jupyterhub-singleuser --config jupyterhub_config.py"]
