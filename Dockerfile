@@ -82,29 +82,29 @@ ls" | bash
 RUN echo "mkdir -p /data/tutorial/amir && \
 cd /data/tutorial/amir && \
 wget -N http://archive.ics.uci.edu/ml/machine-learning-databases/00279/SUSY.csv.gz && \
-yes n | gunzip SUSY.csv.gz && \
-\
-mkdir -p /data/tutorial/ilija && \ 
-cd /data/tutorial/ilija && \
-\
-mkdir -p /data/tutorial/Ben && \
+yes n | gunzip SUSY.csv.gz" | bash
+
+RUN echo "mkdir -p /data/tutorial/ilija && \ 
+cd /data/tutorial/ilija" | bash
+
+RUN echo "mkdir -p /data/tutorial/Ben && \
 cd /data/tutorial/Ben && \
 wget -nc https://data.mendeley.com/archiver/pvn3xc3wy5?version=1 -O CaloGAN.zip && \
-yes n | unzip CaloGAN.zip && \
-\ 
-mkdir -p /ML_platform_tests/tutorial/Ben && \
+yes n | unzip CaloGAN.zip " | bash
+
+RUN echo "mkdir -p /ML_platform_tests/tutorial/Ben && \
 cd /ML_platform_tests/tutorial/Ben && \
 git clone https://github.com/hep-lbdl/CaloGAN.git && \
 cd /ML_platform_tests/tutorial/Ben/CaloGAN/models && \
-echo \"positron: '/data/tutorial/Ben/eplus.hdf5'\" > particles.yaml && \
-\
-cd /opt/root/ && \
+echo \"positron: '/data/tutorial/Ben/eplus.hdf5'\" > particles.yaml" | bash
+
+RUN "cd /opt/root/ && \
 source bin/thisroot.sh && \
 mkdir -p /root/.local/share/jupyter/kernels && \
 cp -r $ROOTSYS/etc/notebook/kernels/root ~/.local/share/jupyter/kernels && \
-mkdir /root/.jupyter/ && \
-\
-wget https://raw.githubusercontent.com/briedel/ML_platform_tests/master/jupyterhub_config.py" | bash
+mkdir /root/.jupyter/" | bash
+
+RUN wget https://raw.githubusercontent.com/briedel/ML_platform_tests/master/jupyterhub_config.py
 
 
 
