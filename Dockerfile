@@ -104,7 +104,7 @@ mkdir -p /root/.local/share/jupyter/kernels && \
 cp -r $ROOTSYS/etc/notebook/kernels/root ~/.local/share/jupyter/kernels && \
 mkdir /root/.jupyter/" | bash
 
-RUN wget https://raw.githubusercontent.com/briedel/ML_platform_tests/master/jupyterhub_config.py
+RUN wget https://raw.githubusercontent.com/briedel/ML_platform_tests/master/jupyterhub_config.py 
 
 
 
