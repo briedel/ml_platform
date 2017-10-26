@@ -29,6 +29,7 @@ RUN pip2 --no-cache-dir install \
         keras \
         elasticsearch \
         gym \
+        graphviz \
         JSAnimation
 RUN python2 -m ipykernel.kernelspec
 
@@ -58,6 +59,7 @@ RUN pip3 --no-cache-dir install \
         keras \
         elasticsearch \
         gym \
+        graphviz \
         JSAnimation
 RUN python3 -m ipykernel.kernelspec
 
