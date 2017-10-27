@@ -30,7 +30,9 @@ RUN pip2 --no-cache-dir install \
         elasticsearch \
         gym \
         graphviz \
-        JSAnimation
+        JSAnimation \
+        holoviews[all] \
+        bokeh
 RUN python2 -m ipykernel.kernelspec
 
 #############################
@@ -60,7 +62,9 @@ RUN pip3 --no-cache-dir install \
         elasticsearch \
         gym \
         graphviz \
-        JSAnimation
+        JSAnimation \
+        holoviews[all] \
+        bokeh
 RUN python3 -m ipykernel.kernelspec
 
 # build info
