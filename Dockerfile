@@ -32,7 +32,8 @@ RUN pip2 --no-cache-dir install \
         graphviz \
         JSAnimation \
         holoviews[all] \
-        bokeh
+        bokeh \
+        Cython
 RUN python2 -m ipykernel.kernelspec
 
 #############################
@@ -64,7 +65,8 @@ RUN pip3 --no-cache-dir install \
         graphviz \
         JSAnimation \
         holoviews[all] \
-        bokeh
+        bokeh \
+        Cython
 RUN python3 -m ipykernel.kernelspec
 
 # build info
@@ -113,8 +115,8 @@ mkdir /root/.jupyter/" | bash
 RUN wget https://raw.githubusercontent.com/briedel/ML_platform_tests/master/jupyterhub_config.py 
 
 
-
 #execute service
 # CMD ["/.run"]
 ENV PATH /usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-CMD ["jupyterhub-singleuser", "--config", "jupyterhub_config.py", "--allow-root"]
+# CMD ["jupyterhub-singleuser", "--config", "jupyterhub_config.py", "--allow-root"]
+CMD ["jupyterhub-singleuser"]
